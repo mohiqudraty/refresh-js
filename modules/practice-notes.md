@@ -119,3 +119,127 @@ practiceScope();
 > Each example is a fenced JavaScript code block. Use its copy button in Markdown previews that support code-block actions.
 
 My runnable practice file is [`variables.js`](variables.js). I can run it with Node.js or open [`index.html`](index.html) and check the browser console.
+
+`TOPIC 02` / `DATA TYPES`
+
+> [!NOTE]
+> A data type describes the kind of value I am working with. JavaScript is dynamically typed, so a variable can hold a value of one type and later hold a value of another type.
+
+## 1. Primitive data types
+
+JavaScript has seven primitive types: `string`, `number`, `bigint`, `boolean`, `undefined`, `symbol`, and `null`.
+
+```js
+const firstName = "mohi"; // string
+const age = 21; // number
+const largeNumber = 9007199254740993n; // bigint
+const isLearning = true; // boolean
+let favoriteColor; // undefined: declared, but not assigned a value
+const uniqueId = Symbol("id"); // symbol: a unique value
+const emptyValue = null; // null: an intentional absence of a value
+
+console.log(typeof firstName); // "string"
+console.log(typeof age); // "number"
+console.log(typeof largeNumber); // "bigint"
+console.log(typeof isLearning); // "boolean"
+console.log(typeof favoriteColor); // "undefined"
+console.log(typeof uniqueId); // "symbol"
+console.log(typeof emptyValue); // "object": a historical JavaScript quirk
+```
+
+> [!TIP]
+> `undefined` often means no value has been assigned. I use `null` when I want to intentionally represent "no value". The `typeof null` result is a long-standing quirk; it does not mean that `null` is an object.
+
+## 2. Objects, arrays, and functions
+
+Objects group related values. Arrays keep an ordered list of values, and functions contain reusable code. Objects and arrays are reference values; functions are callable objects.
+
+```js
+const person = { name: "mohi", age: 21 };
+const colors = ["red", "green", "blue"];
+function sayHello() {
+    return "Hello!";
+}
+
+console.log(typeof person); // "object"
+console.log(typeof colors); // "object"
+console.log(Array.isArray(colors)); // true
+console.log(typeof sayHello); // "function"
+```
+
+> [!IMPORTANT]
+> `typeof` reports arrays as `"object"`, so I use `Array.isArray()` when I need to check whether a value is an array.
+
+## 3. Copying primitive and reference values
+
+When I copy a primitive value, the new variable gets its own value. Changing one variable does not change the other.
+
+```js
+let originalScore = 10;
+let copiedScore = originalScore;
+originalScore = 20;
+
+console.log(originalScore); // 20
+console.log(copiedScore); // 10
+```
+
+When I assign an object to another variable, both variables refer to the same object. Changing a property through either variable is visible through both.
+
+```js
+const originalPerson = { name: "mohi" };
+const copiedPerson = originalPerson;
+originalPerson.name = "mohiuddin";
+
+console.log(originalPerson.name); // "mohiuddin"
+console.log(copiedPerson.name); // "mohiuddin"
+```
+
+I can make a shallow copy with object spread. This creates a different top-level object.
+
+```js
+const personCopy = { ...originalPerson };
+personCopy.name = "mahmud";
+
+console.log(originalPerson.name); // "mohiuddin"
+console.log(personCopy.name); // "mahmud"
+```
+
+## 4. Type coercion
+
+JavaScript sometimes converts a value from one type to another automatically. This is called **type coercion**. I can convert values explicitly when I want the code to be clear.
+
+```js
+console.log("5" + 2); // "52": + joins the values as strings
+console.log("5" - 2); // 3: - converts the string to a number
+console.log(Number("5") + 2); // 7: explicit conversion
+```
+
+## 5. Truthy and falsy values
+
+In a Boolean check, the values `false`, `0`, `-0`, `0n`, `""`, `null`, `undefined`, and `NaN` are falsy. Every other value is truthy, including empty arrays and empty objects.
+
+```js
+console.log(Boolean("")); // false
+console.log(Boolean(0)); // false
+console.log(Boolean("hello")); // true
+console.log(Boolean([])); // true
+console.log(Boolean({})); // true
+```
+
+## What I remember
+
+- JavaScript has seven primitive types: string, number, bigint, boolean, undefined, symbol, and null.
+- Arrays and objects are reference values. `Array.isArray()` checks for arrays.
+- Assigning an object to another variable copies its reference, not the object itself.
+- `typeof null` returns `"object"` because of a historical quirk.
+- JavaScript can coerce values between types; explicit conversions can make my intent clearer.
+- Empty strings, zero, `null`, `undefined`, and `NaN` are falsy. Empty arrays and objects are truthy.
+
+### My practice
+
+1. Create one variable for each primitive type and print its value and `typeof` result.
+2. Check whether an array is an array using `Array.isArray()`.
+3. Copy a number and an object, change each original, and compare what happens to each copy.
+4. Predict the results of `"8" + 3`, `"8" - 3`, and `Boolean([])` before running them.
+
+My runnable data type examples are in [`data-type.js`](data-type.js). I can run the file with Node.js or open [`index.html`](index.html) and check the browser console.
