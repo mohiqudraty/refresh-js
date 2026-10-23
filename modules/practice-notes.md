@@ -359,3 +359,118 @@ console.log(budgetMessage); // "Within budget"
 4. Use a ternary operator to print `"Pass"` for a score of `65` when the passing score is `50`.
 
 My runnable operator examples and solved problems are in [`operators.js`](operators.js). I can run the file with Node.js or open [`index.html`](index.html) and check the browser console.
+
+`TOPIC 04` / `CONTROL FLOW`
+
+> [!NOTE]
+> Control flow determines which statements run and how many times they run. Conditions choose a path, loops repeat work, and `return` can leave a function early.
+
+## 1. Choose a path with `if...else`
+
+I use `if`, `else if`, and `else` to run one branch based on conditions. JavaScript checks the conditions from top to bottom and runs the first matching branch.
+
+```js
+const score = 82;
+
+if (score >= 90) {
+    console.log("Grade: A");
+} else if (score >= 80) {
+    console.log("Grade: B");
+} else if (score >= 70) {
+    console.log("Grade: C");
+} else {
+    console.log("Keep practicing");
+}
+```
+
+## 2. Match a value with `switch`
+
+I use `switch` when I want to compare one expression with several exact values. `break` prevents execution from continuing into the next case. `default` runs when no case matches.
+
+```js
+const role = "editor";
+
+switch (role) {
+    case "admin":
+        console.log("Full access");
+        break;
+    case "editor":
+        console.log("Can edit content");
+        break;
+    default:
+        console.log("Unknown role");
+}
+```
+
+## 3. Repeat work with loops
+
+I use a `for` loop when I know how to initialize, check, and update a counter. A `while` loop checks its condition before each repetition. A `do...while` loop always runs at least once because it checks the condition afterward.
+
+```js
+for (let number = 1; number <= 3; number++) {
+    console.log("For:", number);
+}
+
+let countdown = 2;
+while (countdown > 0) {
+    console.log("While:", countdown);
+    countdown--;
+}
+
+let attempts = 0;
+do {
+    console.log("This runs at least once");
+    attempts++;
+} while (attempts < 1);
+```
+
+`for...of` is a convenient way to visit each value in an iterable, such as an array. `continue` skips to the next repetition, while `break` exits the loop.
+
+```js
+for (const number of [1, 2, 3, 4]) {
+    if (number === 2) {
+        continue;
+    }
+
+    if (number === 4) {
+        break;
+    }
+
+    console.log(number); // 1, then 3
+}
+```
+
+## 4. Return early from a function
+
+An early return handles a condition and exits the function immediately. This can keep the remaining logic easy to follow.
+
+```js
+function getShippingCost(subtotal) {
+    if (subtotal >= 50) {
+        return 0;
+    }
+
+    return 5.99;
+}
+
+console.log(getShippingCost(35)); // 5.99
+console.log(getShippingCost(60)); // 0
+```
+
+## What I remember
+
+- `if...else` chooses a branch based on Boolean conditions.
+- `switch` checks one expression against exact case values; `break` exits a case.
+- `for`, `while`, and `do...while` repeat code with different condition-check timing.
+- `break` exits a loop, and `continue` skips the rest of the current repetition.
+- `return` exits a function and can provide its result.
+
+### My practice
+
+1. Use `if...else` to print whether a number is positive, negative, or zero.
+2. Use `switch` to print a message for a traffic-light color, with a `default` case.
+3. Use a `for` loop to print the even numbers from `2` through `10`.
+4. Write a function that returns `"Adult"` for an age of `18` or more and `"Minor"` otherwise.
+
+My runnable control-flow examples are in [`control-flow.js`](control-flow.js). I can run the file with Node.js and check the output in the terminal.
+

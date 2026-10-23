@@ -116,4 +116,38 @@ console.log(copiedPerson.name); // "mohiuddin"
 // operators in javascript: JavaScript has a variety of operators that can be used to perform operations on values. These include arithmetic operators (+, -, *, /, %), comparison operators (==, ===, !=, !==, >, <, >=, <=), logical operators (&&, ||, !), assignment operators (=, +=, -=, *=, /=), and more. Operators can be used to manipulate values and perform calculations in your code. unary operators: Unary operators are operators that operate on a single operand. In JavaScript, the unary operators include the following:
 // - Unary plus (+): Converts a value to a number. For example, +true evaluates to 1, and +false evaluates to 0.
 // - Unary negation (-): Negates a value. For example, -5 evaluates to -5, and -(-5) evaluates to 5. ternary operator: The ternary operator is a shorthand way of writing an if-else statement. It takes three operands: a condition, a value to return if the condition is true, and a value to return if the condition is false. The syntax for the ternary operator is as follows:
-// condition ? valueIfTrue : valueIfFalse; 
+// condition ? valueIfTrue : valueIfFalse;
+
+
+
+// control flow in javascript: Control flow refers to the order in which statements are executed in a program. In JavaScript, control flow is determined by conditional statements (if, else , else if), loops (for, while, do while), and function calls. Conditional statements allow you to execute different blocks of code based on certain conditions, while loops allow you to repeat a block of code multiple times. Function calls allow you to execute a block of code when the function is called. By using control flow statements effectively, you can create more complex and dynamic programs. 
+
+/* if else statement: The if-else statement is a conditional statement that allows you to execute different blocks of code based on a condition. The syntax for the if-else statement is as follows:
+if (condition) {
+    // code to execute if condition is true
+} else {
+    // code to execute if condition is false
+}
+ */
+
+/* switch statement: The switch statement is a conditional statement that allows you to execute different blocks of code based on the value of a variable. The syntax for the switch statement is as follows:
+switch (expression) {
+    case value1:
+        // code to execute if expression === value1
+        break;
+    case value2:
+        // code to execute if expression === value2
+        break;
+    default:
+        // code to execute if expression does not match any case
+} */
+
+/* early return: The early return pattern is a programming technique that allows you to exit a function early if a certain condition is met. This can help simplify your code and make it easier to read. The syntax for the early return pattern is as follows:
+function exampleFunction(condition) {
+    if (!condition) {
+        return; // exit the function early if condition is false
+    }
+    // code to execute if condition is true
+} */
+
+
