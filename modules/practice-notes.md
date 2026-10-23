@@ -243,3 +243,119 @@ console.log(Boolean({})); // true
 4. Predict the results of `"8" + 3`, `"8" - 3`, and `Boolean([])` before running them.
 
 My runnable data type examples are in [`data-type.js`](data-type.js). I can run the file with Node.js or open [`index.html`](index.html) and check the browser console.
+
+`TOPIC 03` / `OPERATORS`
+
+> [!NOTE]
+> Operators perform actions with values. I use them to calculate, assign, compare, and combine conditions.
+
+## 1. Arithmetic and assignment operators
+
+Arithmetic operators do calculations. `%` gives me the remainder, and `**` raises a number to a power. Assignment operators such as `+=` update a variable using its current value.
+
+```js
+const firstNumber = 12;
+const secondNumber = 5;
+
+console.log(firstNumber + secondNumber); // 17
+console.log(firstNumber - secondNumber); // 7
+console.log(firstNumber * secondNumber); // 60
+console.log(firstNumber / secondNumber); // 2.4
+console.log(firstNumber % secondNumber); // 2
+console.log(secondNumber ** 2); // 25
+
+let total = 10;
+total += 5; // Same as total = total + 5.
+console.log(total); // 15
+```
+
+## 2. Comparison and logical operators
+
+Comparison operators return `true` or `false`. I use `===` and `!==` for strict comparisons so JavaScript does not convert the values before checking them. Logical operators let me combine or reverse conditions.
+
+```js
+console.log(12 > 5); // true
+console.log(12 === 12); // true
+console.log(12 === "12"); // false: the types are different.
+console.log(12 !== 5); // true
+
+const hasTicket = true;
+const isOldEnough = false;
+console.log(hasTicket && isOldEnough); // false: both must be true.
+console.log(hasTicket || isOldEnough); // true: at least one must be true.
+console.log(!hasTicket); // false: ! reverses the Boolean value.
+```
+
+## 3. Conditional and default-value operators
+
+The conditional, or **ternary**, operator chooses one of two values. The nullish coalescing operator `??` uses a default only when the left value is `null` or `undefined`.
+
+```js
+const score = 76;
+const result = score >= 50 ? "Pass" : "Try again";
+console.log(result); // "Pass"
+
+const providedName = "mohi";
+const displayName = providedName ?? "Guest";
+console.log(displayName); // "mohi"
+```
+
+## 4. Solved problems
+
+### Find a rectangle's area and perimeter
+
+Area is length multiplied by width. Perimeter is twice the sum of length and width.
+
+```js
+const length = 8;
+const width = 3;
+const area = length * width;
+const perimeter = 2 * (length + width);
+
+console.log(area); // 24
+console.log(perimeter); // 22
+```
+
+### Check whether a number is even or odd
+
+An even number has a remainder of `0` when divided by `2`. I combine `%` with `===` and the ternary operator to choose the answer.
+
+```js
+const numberToCheck = 17;
+const evenOrOdd = numberToCheck % 2 === 0 ? "Even" : "Odd";
+console.log(evenOrOdd); // "Odd"
+```
+
+### Calculate a discount and check a budget
+
+I calculate the discount amount as a percentage of the original price, subtract it, and compare the result with my budget.
+
+```js
+const originalPrice = 80;
+const discountPercent = 25;
+const finalPrice = originalPrice - (originalPrice * discountPercent / 100);
+const budgetMessage = finalPrice <= 60 ? "Within budget" : "Over budget";
+
+console.log(finalPrice); // 60
+console.log(budgetMessage); // "Within budget"
+```
+
+> [!TIP]
+> Parentheses make the order of a calculation clear. For example, `2 * (length + width)` adds the dimensions before multiplying by `2`.
+
+## What I remember
+
+- Arithmetic operators calculate values; `%` finds a remainder and `**` calculates a power.
+- Assignment operators such as `+=` update a variable.
+- Comparisons return a Boolean. I usually choose `===` and `!==` for strict comparisons.
+- `&&` requires both conditions to be true; `||` requires at least one; `!` reverses a Boolean.
+- The ternary operator chooses between two values. `??` provides a fallback for `null` or `undefined`.
+
+### My practice
+
+1. Calculate the area and perimeter of a rectangle with length `10` and width `4`.
+2. Use `%` to decide whether `24` is even or odd.
+3. A product costs `120` and has a `15` percent discount. Calculate the final price.
+4. Use a ternary operator to print `"Pass"` for a score of `65` when the passing score is `50`.
+
+My runnable operator examples and solved problems are in [`operators.js`](operators.js). I can run the file with Node.js or open [`index.html`](index.html) and check the browser console.

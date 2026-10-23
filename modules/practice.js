@@ -110,3 +110,10 @@ console.log(copiedPerson.name); // "mohiuddin"
 // type coersion: JavaScript is a loosely typed language, which means that it automatically converts values from one data type to another when necessary. This process is called type coercion. For example, if you try to add a number and a string together, JavaScript will convert the number to a string and concatenate the two values.
 
 // truthy falsy values: In JavaScript, values can be classified as either "truthy" or "falsy" based on how they evaluate in a boolean context. A truthy value is any value that evaluates to true when used in a boolean context, while a falsy value is any value that evaluates to false. The following values are considered falsy in JavaScript: false, 0, -0, 0n, "", null, undefined, and NaN. All other values are considered truthy.
+
+
+
+// operators in javascript: JavaScript has a variety of operators that can be used to perform operations on values. These include arithmetic operators (+, -, *, /, %), comparison operators (==, ===, !=, !==, >, <, >=, <=), logical operators (&&, ||, !), assignment operators (=, +=, -=, *=, /=), and more. Operators can be used to manipulate values and perform calculations in your code. unary operators: Unary operators are operators that operate on a single operand. In JavaScript, the unary operators include the following:
+// - Unary plus (+): Converts a value to a number. For example, +true evaluates to 1, and +false evaluates to 0.
+// - Unary negation (-): Negates a value. For example, -5 evaluates to -5, and -(-5) evaluates to 5. ternary operator: The ternary operator is a shorthand way of writing an if-else statement. It takes three operands: a condition, a value to return if the condition is true, and a value to return if the condition is false. The syntax for the ternary operator is as follows:
+// condition ? valueIfTrue : valueIfFalse; 
