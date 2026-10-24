@@ -120,7 +120,7 @@ console.log(copiedPerson.name); // "mohiuddin"
 
 
 
-// control flow in javascript: Control flow refers to the order in which statements are executed in a program. In JavaScript, control flow is determined by conditional statements (if, else , else if), loops (for, while, do while), and function calls. Conditional statements allow you to execute different blocks of code based on certain conditions, while loops allow you to repeat a block of code multiple times. Function calls allow you to execute a block of code when the function is called. By using control flow statements effectively, you can create more complex and dynamic programs. 
+// control flow in javascript: Control flow refers to the order in which statements are executed in a program. In JavaScript, control flow is determined by conditional statements (if, else , else if), loops (for, while, do while), and function calls. Conditional statements allow you to execute different blocks of code based on certain conditions, while loops allow you to repeat a block of code multiple times. Function calls allow you to execute a block of code when the function is called. By using control flow statements effectively, you can create more complex and dynamic programs.
 
 /* if else statement: The if-else statement is a conditional statement that allows you to execute different blocks of code based on a condition. The syntax for the if-else statement is as follows:
 if (condition) {
@@ -151,3 +151,82 @@ function exampleFunction(condition) {
 } */
 
 
+
+// loops : for while, do while, for in, for of, forEach
+/* break and continue statements: The break statement is used to exit a loop or switch statement early, while the continue statement is used to skip the current iteration of a loop and move on to the next one. The syntax for the break and continue statements is as follows:
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        break; // exit the loop early if i equals 5
+    }
+    // code to execute for each iteration
+} */
+
+/* for usecase, the continue statement can be used to skip over certain iterations of a loop.For example, if you want to skip over even numbers in a loop, you could use the continue statement as follows:
+for (let i = 0; i < 10; i++) {
+    if (i % 2 === 0) {
+        continue; // skip the current iteration if i is even
+    }
+    // code to execute for each iteration
+}
+
+for (start; condition; increment / decrement) {
+    // code to execute for each iteration
+}
+ */
+
+// for (let i = 1; i <= 99; i++) {
+//     console.log(i);
+// }
+
+
+/* for (let i = 1; i <= 10; i++) {
+
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
+ */
+
+
+/* for (let i = 1; i <= 10; i++) {
+
+    console.log(`5 x ${i} = ${5 * i}`);
+}
+ */
+/*
+let sum = 0;
+for (let i = 1; i <= 10; i++) {
+    sum += i;
+    console.log(`Sum of first ${i} natural numbers is: ${sum}`);
+}
+console.log(sum);
+ */
+
+
+
+/*
+while loop: The while loop is a control flow statement that allows you to execute a block of code repeatedly as long as a certain condition is true.The syntax for the while loop is as follows:
+while (condition) {
+    // code to execute while condition is true
+} */
+
+/*  do {
+     // code to execute at least once and then repeatedly while condition is true
+ } while (condition) {
+     // code to execute at least once and then repeatedly while condition is true
+ } */
+
+/* let i = 1;
+do {
+    console.log(i);
+    i++;
+} while (i <= 10); */
+
+
+/* let i = 10;
+do {
+    console.log(i);
+    i--;
+} while (i >= 1); */
+
+// diffarance between for loop and while loop: The main difference between a for loop and a while loop is that a for loop is used when you know how many times you want to execute a block of code, while a while loop is used when you want to execute a block of code as long as a certain condition is true. In other words, a for loop is used for counting, while a while loop is used for conditional execution. Additionally, the syntax of a for loop includes an initialization, condition, and increment/decrement statement, while the syntax of a while loop only includes a condition statement.

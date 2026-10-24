@@ -118,7 +118,7 @@ practiceScope();
 > [!TIP]
 > Each example is a fenced JavaScript code block. Use its copy button in Markdown previews that support code-block actions.
 
-My runnable practice file is [`variables.js`](variables.js). I can run it with Node.js or open [`index.html`](index.html) and check the browser console.
+My runnable practice file is [`variables.js`](modules/variables.js). I can run it with Node.js or open [`index.html`](modules/index.html) and check the browser console.
 
 `TOPIC 02` / `DATA TYPES`
 
@@ -242,7 +242,7 @@ console.log(Boolean({})); // true
 3. Copy a number and an object, change each original, and compare what happens to each copy.
 4. Predict the results of `"8" + 3`, `"8" - 3`, and `Boolean([])` before running them.
 
-My runnable data type examples are in [`data-type.js`](data-type.js). I can run the file with Node.js or open [`index.html`](index.html) and check the browser console.
+My runnable data type examples are in [`data-type.js`](modules/data-type.js). I can run the file with Node.js or open [`index.html`](modules/index.html) and check the browser console.
 
 `TOPIC 03` / `OPERATORS`
 
@@ -358,7 +358,7 @@ console.log(budgetMessage); // "Within budget"
 3. A product costs `120` and has a `15` percent discount. Calculate the final price.
 4. Use a ternary operator to print `"Pass"` for a score of `65` when the passing score is `50`.
 
-My runnable operator examples and solved problems are in [`operators.js`](operators.js). I can run the file with Node.js or open [`index.html`](index.html) and check the browser console.
+My runnable operator examples and solved problems are in [`operators.js`](modules/operators.js). I can run the file with Node.js or open [`index.html`](modules/index.html) and check the browser console.
 
 `TOPIC 04` / `CONTROL FLOW`
 
@@ -424,7 +424,7 @@ do {
 } while (attempts < 1);
 ```
 
-`for...of` is a convenient way to visit each value in an iterable, such as an array. `continue` skips to the next repetition, while `break` exits the loop.
+`for...of` is a convenient way to visit each value in an iterable, such as an array. `continue` skips to the next repetition, while `break` exits the loop. More runnable examples are in [`loops.js`](modules/loops.js).
 
 ```js
 for (const number of [1, 2, 3, 4]) {
@@ -472,5 +472,4 @@ console.log(getShippingCost(60)); // 0
 3. Use a `for` loop to print the even numbers from `2` through `10`.
 4. Write a function that returns `"Adult"` for an age of `18` or more and `"Minor"` otherwise.
 
-My runnable control-flow examples are in [`control-flow.js`](control-flow.js). I can run the file with Node.js and check the output in the terminal.
-
+My runnable control-flow examples are in [`control-flow.js`](modules/control-flow.js), and more loop examples are in [`loops.js`](modules/loops.js). I can run either file with Node.js and check the output in the terminal.
