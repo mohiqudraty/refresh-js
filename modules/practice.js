@@ -230,3 +230,60 @@ do {
 } while (i >= 1); */
 
 // diffarance between for loop and while loop: The main difference between a for loop and a while loop is that a for loop is used when you know how many times you want to execute a block of code, while a while loop is used when you want to execute a block of code as long as a certain condition is true. In other words, a for loop is used for counting, while a while loop is used for conditional execution. Additionally, the syntax of a for loop includes an initialization, condition, and increment/decrement statement, while the syntax of a while loop only includes a condition statement.
+
+
+
+/* function in JavaScript: A function is a block of code that can be called and executed multiple times. Functions can take parameters and return values. The syntax for defining a function is as follows:
+function functionName(parameter1, parameter2) {
+    // code to execute
+    return value; // optional
+} */
+
+
+/* function declaration expression arrow function: In JavaScript, there are three main ways to define functions: function declarations, function expressions, and arrow functions.
+
+1. Function Declaration: A function declaration is a named function that is defined using the function keyword. It can be called before it is defined in the code due to hoisting.
+
+function myFunction() {
+    // code to execute
+    return "Hello, World!";
+}
+
+2. Function Expression: A function expression is an anonymous function that is assigned to a variable. It cannot be called before it is defined in the code.
+ function myFunction = function() {
+    // code to execute
+    return "Hello, World!";
+}
+
+
+3. Arrow Function: An arrow function is a shorthand syntax for defining functions using the => syntax. It does not have its own this context and is often used for shorter functions or callbacks.
+
+() => {
+    // code to execute
+    return "Hello, World!";
+} */
+
+// first class functions: In JavaScript, functions are first-class citizens, which means that they can be treated like any other value. This means that functions can be assigned to variables, passed as arguments to other functions, and returned from other functions. This allows for a high degree of flexibility and enables powerful programming patterns such as higher-order functions and callbacks.
+
+// higher-order functions: A higher-order function is a function that takes one or more functions as arguments, returns a function, or both. Higher-order functions allow for more abstract and flexible programming patterns, such as map, filter, and reduce.
+
+// closoure: A closure is a function that has access to its own scope, the outer function's scope, and the global scope. Closures are created when a function is defined inside another function, and they allow for data encapsulation and the creation of private variables.
+
+// lexical scoping: Lexical scoping is a way of determining the scope of a variable based on its location in the source code. In JavaScript, variables are scoped to the function in which they are defined, and nested functions have access to variables defined in their outer functions. This means that a variable defined in an outer function can be accessed by an inner function, but not vice versa.
+
+/*     IIFE: An Immediately Invoked Function Expression (IIFE) is a function that is defined and executed immediately after its creation. IIFEs are often used to create a new scope and avoid polluting the global namespace. The syntax for an IIFE is as follows:
+    (function() {
+        // code to execute
+    })(); */
+
+// hoisting in JavaScript: Hoisting is a behavior in JavaScript where variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use variables and functions before they are declared in the code. However, only the declarations are hoisted, not the initializations.
+
+/* function bmi(weight, height) {
+    return weight / (height * height);
+} console.log(bmi(55, 1.5).toFixed(2)); // 24.44 */
+
+
+
+/* arrays in JavaScript: An array is a data structure that can hold multiple values in a single variable. Arrays are ordered, meaning that the values are stored in a specific order and can be accessed using an index. The syntax for creating an array is as follows:
+let myArray = [value1, value2, value3, ...]; */
+
