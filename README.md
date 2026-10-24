@@ -473,3 +473,74 @@ console.log(getShippingCost(60)); // 0
 4. Write a function that returns `"Adult"` for an age of `18` or more and `"Minor"` otherwise.
 
 My runnable control-flow examples are in [`control-flow.js`](modules/control-flow.js), and more loop examples are in [`loops.js`](modules/loops.js). I can run either file with Node.js and check the output in the terminal.
+
+`TOPIC 05` / `FUNCTIONS`
+
+> [!NOTE]
+> A function is a reusable block of code. It can receive values through parameters, work with those values, and return a result.
+
+## 1. Declare and call a function
+
+I use a function declaration to give reusable code a name. Calling the function runs its body.
+
+```js
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet("Mohi")); // "Hello, Mohi!"
+```
+
+The function's `name` parameter receives the `"Mohi"` argument. `return` sends a value back to the caller.
+
+## 2. Use parameters and return a result
+
+```js
+function add(firstNumber, secondNumber) {
+    return firstNumber + secondNumber;
+}
+
+const sum = add(5, 3);
+console.log(sum); // 8
+```
+
+Parameters are the names in the function definition. Arguments are the actual values I provide when calling it.
+
+## 3. Set a default parameter
+
+A default parameter provides a value when an argument is omitted.
+
+```js
+function introduce(name, country = "Bangladesh") {
+    return `My name is ${name}, and I am from ${country}.`;
+}
+
+console.log(introduce("Mohi"));
+console.log(introduce("Mohi", "Canada"));
+```
+
+## 4. Write an arrow function
+
+Arrow functions are another way to create functions. When the body is a single expression, it can return that expression directly.
+
+```js
+const double = (number) => number * 2;
+console.log(double(4)); // 8
+```
+
+## What I remember
+
+- A function declaration gives reusable code a name.
+- Parameters receive input; arguments are passed when calling the function.
+- `return` sends a result back and ends that function call.
+- Default parameters provide a value when an argument is missing.
+- Arrow functions are useful for writing short function expressions.
+
+### My practice
+
+1. Write a function that takes two numbers and returns their product.
+2. Write a function with a default greeting, then call it with and without an argument.
+3. Write a function that returns `"Minor"` for an age below `18` and `"Adult"` otherwise.
+4. Rewrite a short function expression as an arrow function.
+
+My runnable function examples are in [`functions.js`](modules/functions.js). I can run the file with Node.js and check the output in the terminal.
