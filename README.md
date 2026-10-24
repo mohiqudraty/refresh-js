@@ -643,3 +643,103 @@ console.log(numbers); // [1, 2, 3, 4, 5]
 5. Use `reduce()` to calculate the total of an array of prices.
 
 My runnable array examples are in [`arrays.js`](modules/arrays.js). I can run the file with Node.js and check the output in the terminal.
+
+`TOPIC 07` / `OBJECTS`
+
+> [!NOTE]
+> An object groups related data into key-value pairs. I can read and update its properties, define methods, and safely access nested values.
+
+## 1. Create an object and read its properties
+
+I use dot notation when I know the property name. Bracket notation is useful when the property name is in a variable.
+
+```js
+const person = {
+    name: "Mohi",
+    age: 21,
+};
+
+console.log(person.name); // "Mohi"
+
+const propertyName = "age";
+console.log(person[propertyName]); // 21
+```
+
+## 2. Add, update, and remove properties
+
+```js
+const person = { name: "Mohi", age: 21 };
+
+person.job = "Developer"; // Add a property.
+person.age = 22; // Update a property.
+delete person.job; // Remove a property.
+
+console.log("age" in person); // true
+console.log(person);
+```
+
+The `in` operator checks whether a property exists on the object or its prototype chain.
+
+## 3. Add a method and access nested values
+
+Methods are functions stored as object properties. Optional chaining (`?.`) returns `undefined` instead of throwing an error when a value along the chain is `null` or `undefined`.
+
+```js
+const person = {
+    name: "Mohi",
+    address: { city: "Dhaka" },
+    greet() {
+        return `Hello, my name is ${this.name}.`;
+    },
+};
+
+console.log(person.greet()); // "Hello, my name is Mohi."
+console.log(person.address?.city); // "Dhaka"
+console.log(person.contact?.address); // undefined
+```
+
+## 4. Inspect, destructure, and copy an object
+
+`Object.keys()`, `Object.values()`, and `Object.entries()` return an object's own enumerable keys, values, or key-value pairs. Destructuring lets me assign properties to variables.
+
+```js
+const person = { name: "Mohi", age: 21 };
+
+console.log(Object.keys(person)); // ["name", "age"]
+console.log(Object.values(person)); // ["Mohi", 21]
+console.log(Object.entries(person)); // [["name", "Mohi"], ["age", 21]]
+
+const { name, age } = person;
+console.log(name, age); // "Mohi" 21
+```
+
+Object spread makes a shallow copy: it copies top-level properties, but nested objects are still shared references.
+
+```js
+const original = { name: "Mohi", address: { city: "Dhaka" } };
+const copy = { ...original };
+
+copy.name = "Alex";
+copy.address.city = "Chattogram";
+
+console.log(original.name); // "Mohi"
+console.log(original.address.city); // "Chattogram": the nested object is shared.
+```
+
+## What I remember
+
+- Objects group related values as key-value pairs.
+- Dot notation reads known property names; bracket notation can use a variable.
+- Methods are functions stored on an object.
+- Optional chaining safely reads properties that may be missing.
+- Object spread makes a shallow copy, not a deep copy.
+
+### My practice
+
+1. Create a `book` object with a title, author, and page count, then print each property.
+2. Add a property, update another, and remove one with `delete`.
+3. Add a method that returns a sentence using the object's properties.
+4. Use destructuring to get two properties into variables.
+5. Copy an object with a nested property and observe what happens when you change the nested value in the copy.
+
+My runnable object examples are in [`objects.js`](modules/objects.js). I can run the file with Node.js and check the output in the terminal.

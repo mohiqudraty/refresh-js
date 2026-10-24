@@ -306,3 +306,30 @@ let myArray = [value1, value2, value3];
 let [a, b, c] = myArray;
      */
 
+/* objects in JavaScript: An object is a data structure that can hold multiple values in the form of key-value pairs. Objects are unordered, meaning that the values are not stored in a specific order and can be accessed using their keys. The syntax for creating an object is as follows:
+let myObject = {
+    key1: value1,
+    key2: value2,
+    key3: value3
+}; */
+
+/* object access: You can access, modify, and delete properties in an object using their keys. You can access a property by its key using dot notation or bracket notation, modify it by assigning a new value to that key, and delete it using the delete operator. */
+
+/* key in object: The in operator is used to check if a property exists in an object. It returns true if the property exists and false if it does not. The syntax for using the in operator is as follows:
+if ("key" in myObject) {
+    // code to execute if the property exists
+}  */
+
+/* optional chaining: Optional chaining is a feature in JavaScript that allows you to access properties of an object without having to check if the object or its properties are null or undefined. It uses the ?. operator to safely access nested properties. If any part of the chain is null or undefined, the expression will short-circuit and return undefined instead of throwing an error. The syntax for optional chaining is as follows:
+let myObject = {
+key1: {     
+    nestedKey: "value"
+}
+}; */
+
+/* dot vs bracket notation: In JavaScript, you can access object properties using either dot notation or bracket notation. Dot notation is used when you know the name of the property you want to access, while bracket notation is used when the property name is stored in a variable or is not a valid identifier. The syntax for dot notation is as follows:
+let myObject = {
+    key1: "value1",
+    key2: "value2"
+}; */
+
