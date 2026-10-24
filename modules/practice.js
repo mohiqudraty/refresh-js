@@ -287,3 +287,22 @@ function myFunction() {
 /* arrays in JavaScript: An array is a data structure that can hold multiple values in a single variable. Arrays are ordered, meaning that the values are stored in a specific order and can be accessed using an index. The syntax for creating an array is as follows:
 let myArray = [value1, value2, value3, ...]; */
 
+let arr = [1, 2, 3, 4, 5];
+
+// You can access, modify, and delete elements in an array using their index. The index of an array starts at 0 for the first element. You can access an element by its index, modify it by assigning a new value to that index, and delete it using the splice() method or by setting it to undefined.
+
+
+/* array methods: JavaScript provides a variety of built-in methods for working with arrays. Some common array methods include:
+- push(): Adds one or more elements to the end of an array and returns the new length of the array.
+- pop(): Removes the last element from an array and returns that element.
+- shift(): Removes the first element from an array and returns that element.
+- unshift(): Adds one or more elements to the beginning of an array and returns the new length of the array.
+- splice(): Adds or removes elements from an array at a specified index.
+- slice(): Returns a shallow copy of a portion of an array into a new array
+ */
+
+/* array distructuring: Array destructuring is a feature in JavaScript that allows you to extract values from an array and assign them to variables in a more concise and readable way. The syntax for array destructuring is as follows:
+let myArray = [value1, value2, value3];
+let [a, b, c] = myArray;
+     */
+

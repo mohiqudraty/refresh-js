@@ -544,3 +544,102 @@ console.log(double(4)); // 8
 4. Rewrite a short function expression as an arrow function.
 
 My runnable function examples are in [`functions.js`](modules/functions.js). I can run the file with Node.js and check the output in the terminal.
+
+`TOPIC 06` / `ARRAYS`
+
+> [!NOTE]
+> An array stores an ordered list of values. I use its zero-based indexes to access items, and array methods to add, remove, search, or transform values.
+
+## 1. Create, access, and update an array
+
+The first item is at index `0`. The `length` property tells me how many items the array contains.
+
+```js
+const fruits = ["apple", "banana", "cherry"];
+
+console.log(fruits[0]); // "apple"
+console.log(fruits.length); // 3
+
+fruits[1] = "blueberry";
+console.log(fruits); // ["apple", "blueberry", "cherry"]
+console.log(Array.isArray(fruits)); // true
+```
+
+## 2. Add and remove items
+
+`push()` adds items to the end and `pop()` removes the last item. Both change the original array.
+
+```js
+const colors = ["red", "green"];
+
+colors.push("blue");
+console.log(colors); // ["red", "green", "blue"]
+
+const lastColor = colors.pop();
+console.log(lastColor); // "blue"
+console.log(colors); // ["red", "green"]
+```
+
+## 3. Loop through an array
+
+I use `for...of` when I want to work with each value in order.
+
+```js
+for (const fruit of ["apple", "banana", "cherry"]) {
+    console.log(fruit);
+}
+```
+
+## 4. Search and transform values
+
+`map()` transforms each item into a new array. `filter()` makes a new array from items that pass a condition. `find()` returns the first matching item.
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+const doubledNumbers = numbers.map((number) => number * 2);
+console.log(doubledNumbers); // [2, 4, 6, 8, 10]
+
+const evenNumbers = numbers.filter((number) => number % 2 === 0);
+console.log(evenNumbers); // [2, 4]
+
+const firstNumberOverThree = numbers.find((number) => number > 3);
+console.log(firstNumberOverThree); // 4
+console.log(numbers.includes(3)); // true
+```
+
+## 5. Combine values and copy an array
+
+`reduce()` combines items into one value. Destructuring assigns array items to variables. Spread makes a shallow copy that I can extend without changing the original array.
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+const total = numbers.reduce((sum, number) => sum + number, 0);
+console.log(total); // 15
+
+const [firstNumber, secondNumber] = numbers;
+console.log(firstNumber, secondNumber); // 1 2
+
+const moreNumbers = [...numbers, 6];
+console.log(moreNumbers); // [1, 2, 3, 4, 5, 6]
+console.log(numbers); // [1, 2, 3, 4, 5]
+```
+
+## What I remember
+
+- Arrays keep values in order and use zero-based indexes.
+- `push()` and `pop()` change the original array.
+- `map()` and `filter()` return new arrays; `find()` returns the first match.
+- `reduce()` can combine array values into one result.
+- `Array.isArray()` checks whether a value is an array.
+- Spread (`...`) creates a shallow copy of an array.
+
+### My practice
+
+1. Create an array of four favorite foods and print the first and last items.
+2. Add an item with `push()` and remove the last item with `pop()`.
+3. Use `filter()` to keep only numbers greater than `10`.
+4. Use `map()` to turn an array of names into uppercase names.
+5. Use `reduce()` to calculate the total of an array of prices.
+
+My runnable array examples are in [`arrays.js`](modules/arrays.js). I can run the file with Node.js and check the output in the terminal.
