@@ -322,7 +322,7 @@ if ("key" in myObject) {
 
 /* optional chaining: Optional chaining is a feature in JavaScript that allows you to access properties of an object without having to check if the object or its properties are null or undefined. It uses the ?. operator to safely access nested properties. If any part of the chain is null or undefined, the expression will short-circuit and return undefined instead of throwing an error. The syntax for optional chaining is as follows:
 let myObject = {
-key1: {     
+key1: {
     nestedKey: "value"
 }
 }; */
@@ -333,3 +333,41 @@ let myObject = {
     key2: "value2"
 }; */
 
+
+// DOM manipulation in JavaScript: The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of nodes, where each node corresponds to an element, attribute, or piece of text in the document. JavaScript can be used to manipulate the DOM by selecting elements, modifying their content and attributes, and responding to user events. Common methods for DOM manipulation include getElementById(), querySelector(), createElement(), appendChild(), and addEventListener().
+
+
+/* element selectors in JavaScript: JavaScript provides several methods for selecting elements from the DOM.Some common element selectors include:
+- getElementById(): Selects an element by its ID.
+- getElementsByClassName(): Selects all elements with a specific class name.
+- getElementsByTagName(): Selects all elements with a specific tag name.
+- querySelector(): Selects the first element that matches a CSS selector.
+- querySelectorAll(): Selects all elements that match a CSS selector.
+
+ */
+
+/* text/content access: In JavaScript, you can access the text content of an element using the textContent property. This property returns the text content of an element and its descendants, excluding any HTML tags. You can also set the text content of an element by assigning a new value to the textContent property. The syntax for accessing and modifying the text content of an element is as follows:
+let myElement = document.getElementById("myElement");
+let text = myElement.textContent;
+myElement.textContent = "New text content"; */
+
+
+// innerText  vs innerHTML: innerText and innerHTML are both properties of DOM elements in JavaScript that allow you to get or set the content of an element. The main difference between them is that innerText returns the visible text content of an element, while innerHTML returns the HTML content of an element, including any nested elements and their attributes. This means that innerHTML can be used to add or modify HTML elements within an element, while innerText can only be used to modify the text content of an element.
+
+// textcontent vs innerText: textContent and innerText are both properties of DOM elements in JavaScript that allow you to get or set the text content of an element. The main difference between them is that textContent returns the text content of an element, including any hidden text, while innerText returns the visible text content of an element, excluding any hidden text. This means that textContent can be used to get or set the text content of an element regardless of its visibility, while innerText can only be used to get or set the visible text content of an element.
+
+
+/* atribute manipulation in JavaScript: In JavaScript, you can manipulate the attributes of an element using the setAttribute() and getAttribute() methods. The setAttribute() method allows you to set the value of an attribute for an element, while the getAttribute() method allows you to retrieve the value of an attribute for an element. You can also remove an attribute from an element using the removeAttribute() method. The syntax for manipulating attributes in JavaScript is as follows:
+let myElement = document.getElementById("myElement");
+myElement.setAttribute("class", "newClass");
+
+ */
+
+
+// atribute vs property: In JavaScript, an attribute is a value that is defined in the HTML markup of an element, while a property is a value that is defined in the DOM object of an element. Attributes are static and do not change unless they are modified in the HTML markup, while properties are dynamic and can change based on user interactions or other events. For example, the "value" attribute of an input element defines its initial value, while the "value" property reflects its current value as the user types into it.
+
+// dynamic dom manipulation: Dynamic DOM manipulation refers to the ability to modify the structure, content, and attributes of a web page's Document Object Model (DOM) in real-time using JavaScript. This allows developers to create interactive and responsive web applications that can update the user interface without requiring a full page reload. Common techniques for dynamic DOM manipulation include adding or removing elements, changing element styles, updating text content, and responding to user events such as clicks or form submissions.
+
+// createElement, appendChild, removeChild, replaceChild, insertBefore, cloneNode, setAttribute, getAttribute, removeAttribute, classList.add, classList.remove, classList.toggle, classList.contains, innerHTML, textContent, innerText, querySelector, querySelectorAll, getElementById, getElementsByClassName, getElementsByTagName
+
+// style manipulation in JavaScript: In JavaScript, you can manipulate the styles of an element using the style property. The style property allows you to set or get the inline styles of an element, which are defined directly on the element's HTML tag. You can also use CSS classes to apply styles to elements and manipulate them using the classList property. Common methods for manipulating styles in JavaScript include setting individual style properties, adding or removing CSS classes, and toggling classes on and off.

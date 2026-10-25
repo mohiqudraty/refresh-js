@@ -743,3 +743,48 @@ console.log(original.address.city); // "Chattogram": the nested object is shared
 5. Copy an object with a nested property and observe what happens when you change the nested value in the copy.
 
 My runnable object examples are in [`objects.js`](modules/objects.js). I can run the file with Node.js and check the output in the terminal.
+
+`TOPIC 08` / `THE DOM`
+
+## 1. Select an element and update its text
+
+The **Document Object Model (DOM)** represents the HTML page as elements that JavaScript can select and change. In [modules/index.html](./modules/index.html), the paragraph has the id `description`, so `querySelector("#description")` finds it.
+
+The runnable example in [modules/dom.js](./modules/dom.js) creates a button, adds a click event listener, and uses `textContent` to change the paragraph. Click the button again to restore the original text. The script is loaded after the HTML elements and the existing practice script.
+
+```js
+(() => {
+    const description = document.querySelector("#description");
+
+    if (!description) {
+        throw new Error('The DOM example requires an element with id="description".');
+    }
+
+    const originalText = description.textContent ?? "";
+    const button = document.createElement("button");
+
+    button.type = "button";
+    button.textContent = "Change description";
+    button.setAttribute("aria-pressed", "false");
+
+    button.addEventListener("click", () => {
+        const isUpdated = button.getAttribute("aria-pressed") === "true";
+
+        description.textContent = isUpdated
+            ? originalText
+            : "The description was updated with JavaScript.";
+        button.setAttribute("aria-pressed", String(!isUpdated));
+    });
+
+    document.body.append(button);
+})();
+```
+
+> [!TIP]
+> `createElement()` makes a new element, `addEventListener()` responds to an event, and `append()` adds the element to the page. Use `textContent` for text rather than `innerHTML` when you do not need to insert HTML.
+
+### My practice
+
+1. Change the selector to target `#another-description` and update that paragraph.
+2. Add a second button that changes the heading selected with `.title`.
+3. Try changing the text with `textContent` and compare it with reading the element's current text.
