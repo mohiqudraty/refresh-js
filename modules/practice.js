@@ -369,3 +369,15 @@ myElement.setAttribute("class", "newClass");
 // event bubbling and capturing: Event bubbling and capturing are two phases of event propagation in the DOM. In the capturing phase, the event starts from the root of the DOM tree and propagates down to the target element. In the bubbling phase, the event starts from the target element and propagates up to the root of the DOM tree. By default, events bubble up through the DOM, but you can also use event capturing by specifying the third parameter of addEventListener() as true. This allows you to control how events are handled and can be useful for managing complex event interactions in your web applications.
 
 // forms and form validation in JavaScript: Forms are a common feature of web applications that allow users to input data and submit it to a server for processing. Form validation is the process of checking user input to ensure that it meets certain criteria before it is submitted. In JavaScript, you can use event listeners to detect when a form is submitted and validate the input fields using conditional statements and regular expressions. Common validation techniques include checking for required fields, validating email addresses and phone numbers, and ensuring that passwords meet certain complexity requirements.
+
+// timers and intervals in JavaScript: Timers and intervals are features in JavaScript that allow you to execute code after a certain amount of time has passed or repeatedly at specified intervals. The setTimeout() function is used to execute code after a specified delay, while the setInterval() function is used to execute code repeatedly at specified intervals. You can also use the clearTimeout() and clearInterval() functions to stop the execution of timers and intervals. These features are commonly used for creating animations, updating user interfaces, and implementing time-based functionality in web applications.
+
+/* let counter = 10;
+
+let intervalId = setInterval(() => {
+  console.log(counter);
+  counter--;
+  if (counter < 0) {
+    clearInterval(intervalId);
+  }
+}, 1000); */

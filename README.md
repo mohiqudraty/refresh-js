@@ -852,3 +852,29 @@ form.addEventListener("reset", () => {
 1. Add a subject field and include it in the confirmation.
 2. Show a helpful message when the form is reset.
 3. Try changing the message's `minlength` and test the browser's built-in validation.
+
+`TOPIC 11` / `TIMERS`
+
+## 1. Run code later or repeatedly
+
+JavaScript timers schedule work. `setTimeout()` runs a callback once after a delay, while `setInterval()` runs it repeatedly until I stop it with `clearInterval()`. The runnable countdown example is in [modules/timer.js](./modules/timer.js) and its controls are in [modules/index.html](./modules/index.html).
+
+```js
+const timeoutId = setTimeout(() => {
+    console.log("This message appears after one second.");
+}, 1000);
+clearTimeout(timeoutId); // Cancel it before it runs.
+
+const intervalId = setInterval(() => {
+    console.log("This message repeats every second.");
+}, 1000);
+clearInterval(intervalId); // Stop the repeated callback.
+```
+
+The page countdown uses an interval to refresh the display and clears it when paused, reset, or finished. It calculates the remaining time from a deadline instead of assuming each interval fires exactly on schedule, since browser timers may run later than requested.
+
+### My practice
+
+1. Change the countdown display to show hours when the duration is long enough.
+2. Add a button that cancels a pending `setTimeout()`.
+3. Try a longer interval delay and notice that a timer schedules work but does not guarantee exact timing.
