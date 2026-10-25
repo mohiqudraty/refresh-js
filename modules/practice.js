@@ -52,15 +52,11 @@ hoistedVar = "I am hoisted!"; // This is equivalent to the previous declaration 
 
  */
 
-
-
-
-
 // data type and data system
 
 // primitive data types: string, number, boolean, null, undefined, symbol
 
-// reference data types: object, array, function 
+// reference data types: object, array, function
 
 // you can copy primitive data types and assign them to another variable, but if you change the value of the original variable, the copied variable will not be affected. This is because primitive data types are stored in the stack memory.
 
@@ -69,7 +65,6 @@ let copiedName = name;
 name = "mohiuddin";
 console.log(name); // "mohiuddin"
 console.log(copiedName); // "mohi"
-
 
 // reference data types are stored in the heap memory, and when you copy a reference data type, you are copying the reference to the object in memory, not the object itself. This means that if you change the value of the original variable, the copied variable will also be affected.
 
@@ -83,7 +78,6 @@ console.log(copiedPerson.name); // "mohiuddin"
 // single quates ''
 // duble quates ""
 // backticks ``
-
 
 // number data type: integer and float
 // integer number: 1, 2, 3, 4, 5
@@ -101,8 +95,6 @@ console.log(copiedPerson.name); // "mohiuddin"
 
 // bigint data type: BigInt is a built-in object in JavaScript that provides a way to represent whole numbers larger than 2^53 - 1, which is the largest number JavaScript can reliably represent with the Number primitive. BigInt can be used for arbitrarily large integers, and it is created by appending "n" to the end of an integer literal or by calling the BigInt() constructor.
 
-
-
 // arrays objects and functions are reference data types. They are stored in the heap memory, and when you copy a reference data type, you are copying the reference to the object in memory, not the object itself. This means that if you change the value of the original variable, the copied variable will also be affected.
 
 // dynamic typing: JavaScript is a dynamically typed language, which means that you don't have to specify the data type of a variable when you declare it. The data type of a variable can change at runtime, depending on the value assigned to it. This allows for more flexibility in coding, but it can also lead to unexpected behavior if you're not careful with how you use variables.
@@ -111,14 +103,10 @@ console.log(copiedPerson.name); // "mohiuddin"
 
 // truthy falsy values: In JavaScript, values can be classified as either "truthy" or "falsy" based on how they evaluate in a boolean context. A truthy value is any value that evaluates to true when used in a boolean context, while a falsy value is any value that evaluates to false. The following values are considered falsy in JavaScript: false, 0, -0, 0n, "", null, undefined, and NaN. All other values are considered truthy.
 
-
-
 // operators in javascript: JavaScript has a variety of operators that can be used to perform operations on values. These include arithmetic operators (+, -, *, /, %), comparison operators (==, ===, !=, !==, >, <, >=, <=), logical operators (&&, ||, !), assignment operators (=, +=, -=, *=, /=), and more. Operators can be used to manipulate values and perform calculations in your code. unary operators: Unary operators are operators that operate on a single operand. In JavaScript, the unary operators include the following:
 // - Unary plus (+): Converts a value to a number. For example, +true evaluates to 1, and +false evaluates to 0.
 // - Unary negation (-): Negates a value. For example, -5 evaluates to -5, and -(-5) evaluates to 5. ternary operator: The ternary operator is a shorthand way of writing an if-else statement. It takes three operands: a condition, a value to return if the condition is true, and a value to return if the condition is false. The syntax for the ternary operator is as follows:
 // condition ? valueIfTrue : valueIfFalse;
-
-
 
 // control flow in javascript: Control flow refers to the order in which statements are executed in a program. In JavaScript, control flow is determined by conditional statements (if, else , else if), loops (for, while, do while), and function calls. Conditional statements allow you to execute different blocks of code based on certain conditions, while loops allow you to repeat a block of code multiple times. Function calls allow you to execute a block of code when the function is called. By using control flow statements effectively, you can create more complex and dynamic programs.
 
@@ -150,8 +138,6 @@ function exampleFunction(condition) {
     // code to execute if condition is true
 } */
 
-
-
 // loops : for while, do while, for in, for of, forEach
 /* break and continue statements: The break statement is used to exit a loop or switch statement early, while the continue statement is used to skip the current iteration of a loop and move on to the next one. The syntax for the break and continue statements is as follows:
 for (let i = 0; i < 10; i++) {
@@ -178,7 +164,6 @@ for (start; condition; increment / decrement) {
 //     console.log(i);
 // }
 
-
 /* for (let i = 1; i <= 10; i++) {
 
     if (i % 2 === 0) {
@@ -186,7 +171,6 @@ for (start; condition; increment / decrement) {
     }
 }
  */
-
 
 /* for (let i = 1; i <= 10; i++) {
 
@@ -201,8 +185,6 @@ for (let i = 1; i <= 10; i++) {
 }
 console.log(sum);
  */
-
-
 
 /*
 while loop: The while loop is a control flow statement that allows you to execute a block of code repeatedly as long as a certain condition is true.The syntax for the while loop is as follows:
@@ -222,7 +204,6 @@ do {
     i++;
 } while (i <= 10); */
 
-
 /* let i = 10;
 do {
     console.log(i);
@@ -231,14 +212,11 @@ do {
 
 // diffarance between for loop and while loop: The main difference between a for loop and a while loop is that a for loop is used when you know how many times you want to execute a block of code, while a while loop is used when you want to execute a block of code as long as a certain condition is true. In other words, a for loop is used for counting, while a while loop is used for conditional execution. Additionally, the syntax of a for loop includes an initialization, condition, and increment/decrement statement, while the syntax of a while loop only includes a condition statement.
 
-
-
 /* function in JavaScript: A function is a block of code that can be called and executed multiple times. Functions can take parameters and return values. The syntax for defining a function is as follows:
 function functionName(parameter1, parameter2) {
     // code to execute
     return value; // optional
 } */
-
 
 /* function declaration expression arrow function: In JavaScript, there are three main ways to define functions: function declarations, function expressions, and arrow functions.
 
@@ -282,15 +260,12 @@ function myFunction() {
     return weight / (height * height);
 } console.log(bmi(55, 1.5).toFixed(2)); // 24.44 */
 
-
-
 /* arrays in JavaScript: An array is a data structure that can hold multiple values in a single variable. Arrays are ordered, meaning that the values are stored in a specific order and can be accessed using an index. The syntax for creating an array is as follows:
 let myArray = [value1, value2, value3, ...]; */
 
 let arr = [1, 2, 3, 4, 5];
 
 // You can access, modify, and delete elements in an array using their index. The index of an array starts at 0 for the first element. You can access an element by its index, modify it by assigning a new value to that index, and delete it using the splice() method or by setting it to undefined.
-
 
 /* array methods: JavaScript provides a variety of built-in methods for working with arrays. Some common array methods include:
 - push(): Adds one or more elements to the end of an array and returns the new length of the array.
@@ -333,9 +308,7 @@ let myObject = {
     key2: "value2"
 }; */
 
-
 // DOM manipulation in JavaScript: The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of nodes, where each node corresponds to an element, attribute, or piece of text in the document. JavaScript can be used to manipulate the DOM by selecting elements, modifying their content and attributes, and responding to user events. Common methods for DOM manipulation include getElementById(), querySelector(), createElement(), appendChild(), and addEventListener().
-
 
 /* element selectors in JavaScript: JavaScript provides several methods for selecting elements from the DOM.Some common element selectors include:
 - getElementById(): Selects an element by its ID.
@@ -351,18 +324,15 @@ let myElement = document.getElementById("myElement");
 let text = myElement.textContent;
 myElement.textContent = "New text content"; */
 
-
 // innerText  vs innerHTML: innerText and innerHTML are both properties of DOM elements in JavaScript that allow you to get or set the content of an element. The main difference between them is that innerText returns the visible text content of an element, while innerHTML returns the HTML content of an element, including any nested elements and their attributes. This means that innerHTML can be used to add or modify HTML elements within an element, while innerText can only be used to modify the text content of an element.
 
 // textcontent vs innerText: textContent and innerText are both properties of DOM elements in JavaScript that allow you to get or set the text content of an element. The main difference between them is that textContent returns the text content of an element, including any hidden text, while innerText returns the visible text content of an element, excluding any hidden text. This means that textContent can be used to get or set the text content of an element regardless of its visibility, while innerText can only be used to get or set the visible text content of an element.
-
 
 /* atribute manipulation in JavaScript: In JavaScript, you can manipulate the attributes of an element using the setAttribute() and getAttribute() methods. The setAttribute() method allows you to set the value of an attribute for an element, while the getAttribute() method allows you to retrieve the value of an attribute for an element. You can also remove an attribute from an element using the removeAttribute() method. The syntax for manipulating attributes in JavaScript is as follows:
 let myElement = document.getElementById("myElement");
 myElement.setAttribute("class", "newClass");
 
  */
-
 
 // atribute vs property: In JavaScript, an attribute is a value that is defined in the HTML markup of an element, while a property is a value that is defined in the DOM object of an element. Attributes are static and do not change unless they are modified in the HTML markup, while properties are dynamic and can change based on user interactions or other events. For example, the "value" attribute of an input element defines its initial value, while the "value" property reflects its current value as the user types into it.
 
@@ -371,3 +341,29 @@ myElement.setAttribute("class", "newClass");
 // createElement, appendChild, removeChild, replaceChild, insertBefore, cloneNode, setAttribute, getAttribute, removeAttribute, classList.add, classList.remove, classList.toggle, classList.contains, innerHTML, textContent, innerText, querySelector, querySelectorAll, getElementById, getElementsByClassName, getElementsByTagName
 
 // style manipulation in JavaScript: In JavaScript, you can manipulate the styles of an element using the style property. The style property allows you to set or get the inline styles of an element, which are defined directly on the element's HTML tag. You can also use CSS classes to apply styles to elements and manipulate them using the classList property. Common methods for manipulating styles in JavaScript include setting individual style properties, adding or removing CSS classes, and toggling classes on and off.
+
+// events and event handling in JavaScript: In JavaScript, events are actions or occurrences that happen in the browser, such as a user clicking a button, submitting a form, or moving the mouse. Event handling refers to the process of responding to these events by executing specific code when they occur. You can attach event listeners to elements using the addEventListener() method, which allows you to specify the type of event to listen for and the function to execute when that event occurs. Common event types include click, submit, mouseover, keydown, and many others.
+
+/* addEventListener("click", function() {
+    // code to execute when the element is clicked
+}
+ */
+
+/* removeEventListener("click", function() {
+    // code to execute when the event listener is removed
+} */
+
+// common event types in JavaScript include click, dblclick, mouseover, mouseout, keydown, keyup, submit, change, input, focus, blur, load, resize, scroll, and many others. Each event type corresponds to a specific user action or browser behavior that can be detected and responded to using JavaScript event handling techniques.
+
+// events name: Some common event names in JavaScript include:
+// - click , dblclick: Triggered when an element is clicked
+// - submit: Triggered when a form is submitted
+// - mouseover: Triggered when the mouse pointer moves over an element
+// - keydown: Triggered when a key is pressed down
+// - load: Triggered when the page has finished loading
+// - resize: Triggered when the browser window is resized
+// - scroll: Triggered when the user scrolls the page
+
+// event object: The event object is an object that is automatically passed to event handler functions in JavaScript. It contains information about the event that occurred, such as the type of event, the target element, and any additional data associated with the event. The event object can be used to access properties and methods related to the event, allowing developers to respond to user interactions and browser events in a more dynamic and interactive way.
+
+// event bubbling and capturing: Event bubbling and capturing are two phases of event propagation in the DOM. In the capturing phase, the event starts from the root of the DOM tree and propagates down to the target element. In the bubbling phase, the event starts from the target element and propagates up to the root of the DOM tree. By default, events bubble up through the DOM, but you can also use event capturing by specifying the third parameter of addEventListener() as true. This allows you to control how events are handled and can be useful for managing complex event interactions in your web applications.

@@ -788,3 +788,37 @@ The runnable example in [modules/dom.js](./modules/dom.js) creates a button, add
 1. Change the selector to target `#another-description` and update that paragraph.
 2. Add a second button that changes the heading selected with `.title`.
 3. Try changing the text with `textContent` and compare it with reading the element's current text.
+
+`TOPIC 09` / `EVENTS`
+
+## 1. Respond to browser events
+
+An **event** is an action or occurrence in the browser. I can use `addEventListener()` to run a function when an event happens. In [modules/index.html](./modules/index.html), the event demo has a button and a name form. The runnable code is in [modules/events.js](./modules/events.js).
+
+```js
+countButton.addEventListener("click", () => {
+    clickCount += 1;
+    countOutput.textContent = `Button clicked ${clickCount} ${
+        clickCount === 1 ? "time" : "times"
+    }.`;
+});
+
+nameInput.addEventListener("input", () => {
+    nameFeedback.textContent = `You have typed ${nameInput.value.length} characters.`;
+});
+
+greetingForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = nameInput.value.trim();
+    greetingOutput.textContent = `Hello, ${name || "there"}!`;
+});
+```
+
+The click listener counts button clicks. The input listener responds as I type, and the submit listener greets me. `preventDefault()` stops the form from reloading the page. The complete example checks that its required HTML elements exist before adding listeners.
+
+### My practice
+
+1. Add a `change` listener to a select element and display the selected value.
+2. Add a reset button that clears the greeting output.
+3. Try `keydown` on the name input and compare it with the `input` event.
