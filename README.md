@@ -822,3 +822,33 @@ The click listener counts button clicks. The input listener responds as I type, 
 1. Add a `change` listener to a select element and display the selected value.
 2. Add a reset button that clears the greeting output.
 3. Try `keydown` on the name input and compare it with the `input` event.
+
+`TOPIC 10` / `FORMS`
+
+## 1. Read and handle form values
+
+HTML forms collect values from users. In [modules/index.html](./modules/index.html), the contact form has required name and email fields plus a message that must contain at least 10 characters. The browser checks these constraints before it fires the `submit` event. The runnable example is in [modules/form.js](./modules/form.js).
+
+```js
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+
+    feedback.textContent = `Thanks, ${name}! Your message from ${email} has been received (${message.length} characters).`;
+});
+
+form.addEventListener("reset", () => {
+    feedback.textContent = "";
+});
+```
+
+`preventDefault()` stops the browser's normal page navigation so the example can handle the values itself. Trimming removes extra whitespace from the beginning and end. The reset listener clears the confirmation when the form is reset. This example displays a confirmation only; it does not send or store the form data.
+
+### My practice
+
+1. Add a subject field and include it in the confirmation.
+2. Show a helpful message when the form is reset.
+3. Try changing the message's `minlength` and test the browser's built-in validation.
