@@ -381,3 +381,32 @@ let intervalId = setInterval(() => {
     clearInterval(intervalId);
   }
 }, 1000); */
+
+// web storage in JavaScript: Web storage is a feature in JavaScript that allows you to store data in the browser's local storage or session storage. Local storage allows you to store data that persists even after the browser is closed, while session storage allows you to store data that is cleared when the browser session ends. You can use the localStorage and sessionStorage objects to set, get, and remove data from web storage. This feature is commonly used for storing user preferences, authentication tokens, and other data that needs to persist across page reloads or sessions.
+
+// cookies in JavaScript: Cookies are small pieces of data that are stored in the user's browser and sent to the server with each request. They can be used to store user preferences, authentication tokens, and other data that needs to persist across page reloads or sessions. In JavaScript, you can use the document.cookie property to set, get, and delete cookies. However, cookies have limitations on size and security, and they are sent with every HTTP request, which can impact performance. For more secure and efficient storage, web storage (localStorage and sessionStorage) is often preferred over cookies.
+
+/* let myObject = {
+  name: "mohi",
+  age: 25,
+  city: "Dhaka",
+  country: "Bangladesh",
+};
+
+localStorage.setItem("myObject", JSON.stringify(myObject));
+let retrievedObject = JSON.parse(localStorage.getItem("myObject"));
+console.log(retrievedObject);
+
+localStorage.getItem("myObject"); // This will retrieve the object from local storage and return it as a string. You can then parse it back into an object using JSON.parse().
+
+localStorage.removeItem("myObject");
+ */
+
+/* sessionStorage.setItem("myObject", JSON.stringify(myObject));
+let retrievedObject = JSON.parse(sessionStorage.getItem("myObject"));
+console.log(retrievedObject);
+
+sessionStorage.clear();
+ */
+
+// document.cookie = "myCookie=cookieValue; expires=7; path=/"; this will set a cookie named "myCookie" with the value "cookieValue" that expires in 7 days and is accessible from the root path of the website. You can also set additional attributes such as domain, secure, and HttpOnly to control the behavior of the cookie. To retrieve the value of a cookie, you can use document.cookie and parse the string to extract the desired value. To delete a cookie, you can set its expiration date to a past date.

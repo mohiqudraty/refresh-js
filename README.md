@@ -878,3 +878,23 @@ The page countdown uses an interval to refresh the display and clears it when pa
 1. Change the countdown display to show hours when the duration is long enough.
 2. Add a button that cancels a pending `setTimeout()`.
 3. Try a longer interval delay and notice that a timer schedules work but does not guarantee exact timing.
+
+`TOPIC 12` / `WEB STORAGE`
+
+## 1. Save a preference in the browser
+
+Web Storage lets a page store string data in the browser. `localStorage` keeps data after the tab or browser is closed; `sessionStorage` keeps it for the current tab session. The runnable example in [modules/webstorage.js](./modules/webstorage.js) saves, loads, and removes a favorite-color preference using the controls in [modules/index.html](./modules/index.html).
+
+```js
+localStorage.setItem("favorite-color", "blue");
+const savedColor = localStorage.getItem("favorite-color");
+localStorage.removeItem("favorite-color");
+```
+
+Storage values are strings. To store an object, convert it with `JSON.stringify()` and read it back with `JSON.parse()`. The example reports storage errors in the page and checks that a saved color is still an available option. Do not store passwords, authentication tokens, or other sensitive data in Web Storage: scripts running on the page can access it.
+
+### My practice
+
+1. Save a theme preference and restore it when the page loads.
+2. Store a small object by using `JSON.stringify()` and `JSON.parse()`.
+3. Try the same example with `sessionStorage` and compare what happens after closing the tab.
