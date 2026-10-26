@@ -410,3 +410,32 @@ sessionStorage.clear();
  */
 
 // document.cookie = "myCookie=cookieValue; expires=7; path=/"; this will set a cookie named "myCookie" with the value "cookieValue" that expires in 7 days and is accessible from the root path of the website. You can also set additional attributes such as domain, secure, and HttpOnly to control the behavior of the cookie. To retrieve the value of a cookie, you can use document.cookie and parse the string to extract the desired value. To delete a cookie, you can set its expiration date to a past date.
+
+// important things in js: scope execution context closure hoisting lexical scoping first class function higher order function callback function IIFE event bubbling and capturing event delegation DOM manipulation web storage cookies
+
+// scope
+// functional scope, global scope, block scope, lexical scope, closure
+
+// what scope is in JavaScript? Scope refers to the accessibility or visibility of variables and functions in different parts of your code. In JavaScript, there are three types of scope: global scope, function scope, and block scope. Global scope refers to variables and functions that are accessible from anywhere in your code. Function scope refers to variables and functions that are accessible only within the function in which they are defined. Block scope refers to variables and functions that are accessible only within the block in which they are defined, such as within an if statement or a loop.
+
+/* global scope: Variables and functions defined in the global scope are accessible from anywhere in your code. They are created when the JavaScript engine first loads your code and remain in memory until the page is closed or refreshed.
+
+let globalLet = "I am a global variable"; // This variable is accessible from anywhere in your code. */
+
+/* function scope: Variables and functions defined within a function are only accessible within that function. They are created when the function is called and destroyed when the function returns.
+
+function fnLet() {
+    let fnLet = "im the functional scope"
+} */
+
+/* block scope: Variables and functions defined within a block (e.g., within an if statement or a loop) are only accessible within that block. They are created when the block is entered and destroyed when the block is exited.
+
+
+{
+    let blockLet = "im the block scope"
+}
+ */
+
+// exicution context: memory creation phase, code execution phase, global execution context, functional execution context, block execution context
+
+
